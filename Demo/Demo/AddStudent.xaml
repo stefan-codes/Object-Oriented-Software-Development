@@ -1,0 +1,8 @@
+﻿<Window x:Class="Demo.AddStudent"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="AddStudent" Height="300" Width="300">
+    <Grid>
+        
+    </Grid>
+</Window>

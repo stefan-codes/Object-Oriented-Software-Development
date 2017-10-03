@@ -1,0 +1,10 @@
+D:\demoCode\demoCode\Demo\BusinessObjects\bin\Debug\BusinessObjects.dll
+D:\demoCode\demoCode\Demo\BusinessObjects\bin\Debug\BusinessObjects.pdb
+D:\demoCode\demoCode\Demo\BusinessObjects\obj\Debug\Business.csprojResolveAssemblyReference.cache
+D:\demoCode\demoCode\Demo\BusinessObjects\obj\Debug\BusinessObjects.dll
+D:\demoCode\demoCode\Demo\BusinessObjects\obj\Debug\BusinessObjects.pdb
+D:\OOSDCW1\Demo\BusinessObjects\bin\Debug\BusinessObjects.dll
+D:\OOSDCW1\Demo\BusinessObjects\bin\Debug\BusinessObjects.pdb
+D:\OOSDCW1\Demo\BusinessObjects\obj\Debug\Business.csprojResolveAssemblyReference.cache
+D:\OOSDCW1\Demo\BusinessObjects\obj\Debug\BusinessObjects.dll
+D:\OOSDCW1\Demo\BusinessObjects\obj\Debug\BusinessObjects.pdb
