@@ -1,8 +1,11 @@
 ﻿<Window x:Class="Demo.AddStudent"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Closing="ClosingWindow"
         Title="AddStudent" Height="300" Width="300">
     <Grid>
-        
+        <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="182,216,0,0" Click="Button_Click"/>
+
     </Grid>
+    
 </Window>

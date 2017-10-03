@@ -27,6 +27,19 @@ namespace Demo
             InitializeComponent();
         }
 
+        private void addBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            AddStudent addFrm = new AddStudent(this);
+            addFrm.Show();
+        }
+
+        public void TextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tb = (TextBox)sender;
+            tb.Text = string.Empty;
+            tb.GotFocus -= TextBox_GotFocus;
+        }
       
     }
 }
