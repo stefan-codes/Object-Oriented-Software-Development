@@ -49,5 +49,13 @@ namespace BusinessObjects
             }
            
         }
+
+        public List<Student> List
+        {
+            get
+            {
+                return _list;
+            }    
+        }
     }
 }

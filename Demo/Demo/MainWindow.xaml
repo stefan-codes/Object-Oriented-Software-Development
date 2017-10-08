@@ -2,25 +2,28 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="Demo.MainWindow"
-        Title="MainWindow" Height="373.431" Width="608.472">
-    <Grid>
+        Title="MainWindow" Height="327.692" Width="460.472" ResizeMode="NoResize">
+    <Grid RenderTransformOrigin="0.609,0.431" Margin="0,0,-6,0">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="259*"/>
-            <ColumnDefinition Width="258*"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="addBtn" Content="Add" HorizontalAlignment="Right" Margin="0,0,10,10" Width="75" Height="22" VerticalAlignment="Bottom" Click="addBtn_Click"/>
-        <Button x:Name="deleteBtn" Content="Delete" Margin="10,0,0,10" Grid.Column="1" RenderTransformOrigin="-0.131,0.563" HorizontalAlignment="Left" Width="75" Height="22" VerticalAlignment="Bottom"/>
-        <ListBox x:Name="resultList" Margin="10,50" Grid.Column="1"/>
-        <Button x:Name="findBtn" Content="Find" HorizontalAlignment="Left" Margin="170,10,0,0" VerticalAlignment="Top" Width="75" Grid.Column="1"/>
-        <TextBox x:Name="inputTxt" HorizontalAlignment="Left" Height="23" Margin="45,10,0,0" TextWrapping="Wrap" Text="Search..." VerticalAlignment="Top" Width="120" Grid.Column="1" GotFocus="TextBox_GotFocus"/>
-        <TextBox x:Name="matrNumTxt" Height="23" Margin="162,53,10,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <Label x:Name="matrNumLbl" Content="Matriculation Number" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="firstNameLbl" Content="First Name" HorizontalAlignment="Left" Margin="10,81,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lastNameLbl" Content="Last Name" HorizontalAlignment="Left" Margin="10,112,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="dateOfBirthLbl" Content="Date of Birth" HorizontalAlignment="Left" Margin="10,143,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="cwLbl" Content="Coursework Grade" HorizontalAlignment="Left" Margin="10,174,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="examLbl" Content="Exam Grade" HorizontalAlignment="Left" Margin="10,205,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="firstNameTxt" Height="23" Margin="162,81,10,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBox x:Name="lastNameTxt" Height="23" Margin="162,109,10,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button x:Name="addBtn" Content="Add" Margin="10,254,0,0" Click="addBtn_Click" HorizontalAlignment="Left" Width="75" VerticalAlignment="Top" Height="20"/>
+        <Button x:Name="findBtn" Content="Find" Margin="100,254,0,0" VerticalAlignment="Top" Height="20" HorizontalAlignment="Left" Width="75" Click="findBtn_Click"/>
+        <Button x:Name="deleteBtn" Content="Delete" Margin="190,254,0,0" RenderTransformOrigin="-0.131,0.563" HorizontalAlignment="Left" Width="75" VerticalAlignment="Top" Height="20" Click="deleteBtn_Click"/>
+        <Button x:Name="resetAllBtn" Content="Reset Form" HorizontalAlignment="Left" Margin="280,254,0,0" VerticalAlignment="Top" Width="75" Height="20" Click="resetAllBtn_Click"/>
+        <Button x:Name="listAllBtn" Content="List All" Margin="370,254,0,25" HorizontalAlignment="Left" Width="75" Click="listAllBtn_Click"/>
+        <ListBox x:Name="memberList" Margin="280,53,0,0" Height="178" VerticalAlignment="Top" HorizontalAlignment="Left" Width="165" SelectionChanged="memberList_SelectionChanged" LostFocus="memberList_LostFocus"/>
+        <Label x:Name="matrNumLbl" Content="Matriculation Number" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top" Height="26" Width="127"/>
+        <Label x:Name="firstNameLbl" Content="First Name" HorizontalAlignment="Left" Margin="10,81,0,0" VerticalAlignment="Top" Height="26" Width="67"/>
+        <Label x:Name="lastNameLbl" Content="Last Name" HorizontalAlignment="Left" Margin="10,112,0,0" VerticalAlignment="Top" Height="26" Width="66"/>
+        <Label x:Name="dateOfBirthLbl" Content="Date of Birth" HorizontalAlignment="Left" Margin="10,143,0,0" VerticalAlignment="Top" Height="26" Width="77"/>
+        <Label x:Name="cwLbl" Content="Coursework Grade" HorizontalAlignment="Left" Margin="10,174,0,0" VerticalAlignment="Top" Height="26" Width="108"/>
+        <Label x:Name="examLbl" Content="Exam Grade" HorizontalAlignment="Left" Margin="10,205,0,0" VerticalAlignment="Top" Height="26" Width="73"/>
+        <TextBox x:Name="matrNumTxt" Height="23" Margin="162,53,0,0" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="matrNumTxt_TextChanged" HorizontalAlignment="Left" Width="103"/>
+        <TextBox x:Name="firstNameTxt" Height="23" Margin="162,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="firstNameTxt_TextChanged" HorizontalAlignment="Left" Width="103"/>
+        <TextBox x:Name="lastNameTxt" Height="23" Margin="162,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="lastNameTxt_TextChanged" HorizontalAlignment="Left" Width="103"/>
+        <DatePicker x:Name="datePicker" Margin="162,145,0,0" VerticalAlignment="Top" Text="sdf" FirstDayOfWeek="Monday" SelectedDateFormat="Short" SelectedDateChanged="datePciker_DateChanged" Height="24" HorizontalAlignment="Left" Width="103" DisplayDateStart="1900-01-01"/>
+        <TextBox x:Name="cwGradeTxt" Height="23" Margin="162,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="cwGradeTxt_TextChanged" HorizontalAlignment="Left" Width="103"/>
+        <TextBox x:Name="examGradeTxt" Height="23" Margin="162,208,0,0" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="examGradeTxt_TextChanged" HorizontalAlignment="Left" Width="103"/>
     </Grid>
 </Window>
